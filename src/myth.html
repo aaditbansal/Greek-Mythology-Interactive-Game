@@ -1,0 +1,187 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myth Description</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="myth-title"></h1>
+    <p id="myth-description"></p>
+    <button onclick="window.history.back()">Go Back</button>
+
+    <script>
+        const myths = {
+            perseus: {
+                title: "The Myth of Perseus and Andromeda",
+                description: `Perseus is a demigod known for slaying the Gorgon Medusa and rescuing Andromeda. Armed with magical gifts from the gods, he symbolises bravery and cleverness.`
+            },
+            heracles: {
+                title: "The Twelve Labours of Heracles",
+                description: "Heracles, famed for his incredible strength, is tasked with twelve labors as punishment for a crime. His journey showcases themes of redemption and the duality of heroism."
+            },
+            theseus: {
+                title: "The Legend of Theseus and the Minotaur",
+                description: "Theseus is known for defeating the Minotaur in the labyrinth of Crete, representing the triumph of civilization over chaos and the journey toward self-discovery."
+            },
+            atalanta: {
+                title: "The Story of Atalanta the Huntress",
+                description: "Atalanta is a fierce huntress who participates in the Calydonian Boar Hunt and challenges her suitors to a race, emphasizing themes of independence and empowerment."
+            },
+            achilles: {
+                title: "The Epic of Achilles, Hero of the Trojan War",
+                description: "Achilles, a key figure in the Trojan War, embodies the complexity of heroism, experiencing both glory and tragedy as he grapples with fate and loss."
+            },
+            odysseus: {
+                title: "The Saga of Odysseus, King of Ithaca",
+                description: "Odysseus, the clever hero of the *Odyssey*, faces numerous challenges on his long journey home after the Trojan War, exploring themes of loyalty and the quest for identity."
+            },
+            jason: {
+                title: "The Tale of Jason and the Argonauts",
+                description: "Jason leads the Argonauts on a quest for the Golden Fleece, with themes of ambition and betrayal intertwined with his relationship with the sorceress Medea."
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const mythKey = params.get('myth');
+
+        if (mythKey && myths[mythKey]) {
+            document.getElementById('myth-title').innerText = myths[mythKey].title;
+            document.getElementById('myth-description').innerText = myths[mythKey].description;
+        } else {
+            document.getElementById('myth-title').innerText = "Myth Not Found";
+            document.getElementById('myth-description').innerText = "Sorry, this myth does not exist.";
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myth Description</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="myth-title"></h1>
+    <div id="myth-description"></div>
+    <button onclick="window.history.back()">Go Back</button>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const mythKey = params.get('myth');
+
+        // Fetch the external HTML file with myth descriptions
+        fetch('myths.html')  // This will fetch the myths.html file you created
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(data, 'text/html');
+                const mythContent = doc.getElementById(mythKey); // Get the myth by its ID
+
+                if (mythContent) {
+                    document.getElementById('myth-title').innerText = mythContent.querySelector('h2').innerText;
+                    document.getElementById('myth-description').innerHTML = mythContent.innerHTML;
+                } else {
+                    document.getElementById('myth-title').innerText = "Myth Not Found";
+                    document.getElementById('myth-description').innerText = "Sorry, this myth does not exist.";
+                }
+            })
+            .catch(error => {
+                console.error("Error loading the myth data:", error);
+            });
+    </script>
+</body>
+</html>
+ -->
+
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Myth Description</title>
+     <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+     <h1 id="myth-title"></h1>
+     <div id="myth-description"></div> <!-- Use a div to support multiple paragraphs -->
+     <button onclick="window.history.back()" id="myth-button">Go Back</button>
+ 
+     <script>
+         // Fetch the JSON file with the descriptions
+         fetch('mythDescriptions.json')
+             .then(response => response.json())
+             .then(myths => {
+                 const params = new URLSearchParams(window.location.search);
+                 const mythKey = params.get('myth');
+ 
+                 if (mythKey && myths[mythKey]) {
+                     // Set the title and description
+                     document.getElementById('myth-title').innerText = myths[mythKey].title;
+
+                     const imgElement = document.createElement('img');
+                     imgElement.src = myths[mythKey].image;
+                     imgElement.alt = myths[mythKey].title;
+                     imgElement.id = "myth-image"
+                     document.body.appendChild(imgElement);
+
+                     document.body.insertBefore(imgElement, document.getElementById('myth-description'));
+
+                     document.getElementById('myth-description').innerHTML = myths[mythKey].description.join('<br><br>');
+
+                     const hr = document.createElement('hr');
+                     hr.style.border = '1px solid #ccc'; // Thin gray line
+                     document.body.appendChild(hr);
+
+
+                     const buttonsContainer = document.createElement('div'); // Create a container for the buttons
+                     buttonsContainer.classList.add('myth-buttons'); // Optional: add a class for styling
+
+                     myths[mythKey].buttons.forEach(button => {
+
+                         const btn = document.createElement('button');
+                         btn.id = button.id; // Set the ID of the button
+                         btn.innerText = button.text; // Set the text of the button
+                         
+                         const mythName = myths[mythKey].title + ': ' + button.text;
+                         btn.setAttribute('data-myth', mythName);
+
+                         buttonsContainer.appendChild(btn); // Add button to the container
+
+                         btn.addEventListener('click', function() {
+                            window.location.href = `chat.html?myth=${mythName}`;
+                         });
+
+                     });
+
+                     // Add the buttons container below the description
+                     document.body.appendChild(buttonsContainer);
+
+
+                     const goBackButton = document.querySelector('button'); // Get the existing "Go Back" button
+                     document.body.insertBefore(goBackButton, hr); // Move it before the horizontal line
+
+
+                 } else {
+                     document.getElementById('myth-title').innerText = "Myth Not Found";
+                     document.getElementById('myth-description').innerText = "Sorry, this myth does not exist.";
+                 }
+             })
+             .catch(error => {
+                 console.error('Error loading myth descriptions:', error);
+             });
+     </script>
+ </body>
+ </html>

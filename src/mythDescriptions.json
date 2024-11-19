@@ -1,0 +1,148 @@
+{
+    "perseus": {
+      "title": "The Myth of Perseus and Andromeda",
+      "image": "images/perseus-image-resize.jpg",
+      "description": [
+          "The myth of Perseus and Andromeda begins with a prophecy and a heroic journey. Perseus, son of Zeus and Danaë, is born into a world where his very existence is both a threat and a promise. King Acrisius of Argos, fearful of a prophecy that his grandson will be his downfall, imprisons his daughter Danaë to prevent her from bearing a child. However, Zeus comes to Danaë in the form of golden rain, and she gives birth to Perseus. When Acrisius learns of Perseus's birth, he casts Danaë and her son into the sea in a chest. Miraculously, they survive and are taken in by the kind fisherman Dictys on the island of Seriphus.",
+          "As Perseus grows, he becomes strong and brave. Meanwhile, the king of Seriphus, Polydectes, becomes infatuated with Danaë and plots to rid himself of Perseus. Polydectes challenges Perseus to bring him the head of Medusa, one of the three Gorgon sisters whose gaze turns anyone who looks at her to stone. Despite the danger, Perseus accepts the quest, hoping to protect his mother. The gods intervene, providing Perseus with magical tools: Athena lends him her polished shield, Hermes gives him winged sandals, and he is given a kibisis (a magical bag) to safely contain Medusa's head, as well as Hades' cap of invisibility.",
+          "With these gifts, Perseus ventures to the land of the Gorgons. Using Athena’s shield as a mirror to avoid Medusa’s deadly gaze, Perseus successfully beheads her and captures her head in the kibisis. On his journey home, he flies over Ethiopia, where he spots Andromeda, a beautiful princess, chained to a rock by the sea. Her mother, Queen Cassiopeia, had boasted that Andromeda was more beautiful than the sea nymphs, enraging Poseidon. In retaliation, Poseidon sent a monstrous sea creature, Cetus, to ravage the land. The only way to appease the god was to sacrifice Andromeda to the beast.",
+          "Upon seeing her plight, Perseus is captivated by Andromeda's beauty and courage. He strikes a deal with her parents, King Cepheus and Queen Cassiopeia: if he rescues her, he can take her as his bride. They agree, and Perseus confronts the sea monster, ultimately defeating it by either killing it with his sword or revealing Medusa’s head to turn it to stone, depending on the version of the story.",
+          "Freed from her chains, Andromeda marries Perseus. However, their troubles are not yet over. Andromeda’s original betrothed, Phineus, contests the marriage, leading to a confrontation in which Perseus uses Medusa’s head once more, turning Phineus and his supporters to stone. Eventually, Perseus and Andromeda return to Seriphus, where Perseus frees his mother from Polydectes’ advances by turning him to stone as well.",
+          "The couple later travels to Argos, where Perseus inadvertently fulfils the prophecy by accidentally killing his grandfather, Acrisius, during an athletic contest. Perseus and Andromeda go on to rule Tiryns and have a large family. Their story concludes with their transformation into constellations in the night sky, forever immortalised as symbols of bravery, love, and divine favour."
+      ],
+      "buttons": [
+        {
+          "id": "myth-button",
+          "text": "Interact with Perseus!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Medusa!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Andromeda!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Dictys!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Acrisius!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Danaë!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Zeus!"
+        }
+      ]
+    },
+    "heracles": {
+      "title": "The Twelve Labours of Heracles",
+      "image": "images/heracles-image.webp",
+      "description": [
+        "Heracles, famed for his incredible strength, is tasked with twelve labours as punishment for a crime. His journey showcases themes of redemption and the duality of heroism.",
+        "Each labour presents a unique challenge, from slaying the Nemean Lion to capturing the Erymanthian Boar."
+      ],
+      "buttons": [
+        {
+          "id": "myth-button",
+          "text": "Interact with Heracles!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Zeus!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Hera!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Eurystheus!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Alcmene!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Iolaus!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Megara!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Deianira!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Cerberus!"
+        }
+      ]
+    },
+    "theseus": {
+      "title": "The Legend of Theseus and the Minotaur",
+      "image": "images/theseus-image.jpg",
+      "description": [
+        "As legend has it, in ancient Greece, Theseus was born to King Aegeus of Athens and Aethra, daughter of King Pittheus of Troezen. According to some versions of the myth, Theseus’ true father was not Aegeus, but Poseidon, god of the sea. In this version, Aethra was seduced by Poseidon on the night she was instructed by Aegeus to sleep with him, leading to Theseus’ divine heritage. When he reached manhood, Theseus lifted a heavy stone to reveal Aegeus' sword and sandals, proving he was ready to claim his birthright. He set off to Athens, eager to meet his father and begin his journey. Along the way, he defeated a series of notorious criminals, including Sinis, a bandit who killed travellers by bending trees and launching them into the air, and Procrustes, who tortured guests by forcing them to fit his iron bed, either stretching or chopping off their limbs. Theseus vanquished them both, earning a reputation as a hero even before reaching Athens.",
+        "Upon his arrival, Theseus was welcomed by his father, King Aegeus. Yet trouble soon arose when Athens was forced to send seven young men and seven young women each year as tribute to Crete, where they would be sacrificed to the Minotaur, a half-man, half-bull monster in the labyrinth of King Minos. This terrible punishment had been imposed after the death of Minos' son, Androgeos, at the hands of the Athenians. Theseus, in an act of courage, volunteered to be one of the tributes, determined to end the Minotaur’s terror.",
+        "In Crete, Theseus met Princess Ariadne, who fell in love with him and wanted to help him defeat the beast. She gave him a ball of thread, which he could unravel as he entered the labyrinth, ensuring he could find his way back. Armed with the thread, Theseus ventured into the maze, found the Minotaur, and, in most versions, defeated the beast using both his strength and wits. After killing the Minotaur, Theseus retraced his steps and escaped the labyrinth, taking Ariadne with him. However, in some stories, Theseus abandoned Ariadne on the island of Naxos, where the god Dionysus later took her as his wife.",
+        "Theseus returned to Athens a hero, but in his excitement, he forgot to change the sails of his ship from black to white, as a signal to his father that he had survived. When Aegeus saw the black sails, he believed his son had perished and, in his grief, threw himself into the sea, which was thereafter called the Aegean Sea. Theseus, devastated by his father’s death, took the throne of Athens.",
+        "In the years that followed, Theseus became a powerful ruler, often credited with uniting the scattered villages of Attica into a single city-state, Athens. His reign was marked by many adventures: he joined the Argonauts on their quest for the Golden Fleece, fought in the battle between the Lapiths and the Centaurs at the wedding of Pirithous, and even defeated the Amazons. Theseus married the Amazonian queen, Antiope, and fathered several children, including the tragic Hippolytus, who would later become caught in a web of familial strife.",
+        "As Theseus grew older, his fortunes shifted. He was exiled from Athens and eventually met his end. According to some versions, he was betrayed and killed by King Lycomedes of Skyros, either by being pushed off a cliff or through other treacherous means. In some variants of the myth, Theseus’ death was linked to a curse, and in others, it was tied to the failure of his leadership. Despite his tragic end, Theseus’ legacy endured. Whether as the son of Aegeus or Poseidon, he was remembered as a hero who helped shape Athens, uniting it into a powerful city-state and embarking on legendary adventures that have echoed through history."
+      ],
+      "buttons": [
+        {
+          "id": "myth-button",
+          "text": "Interact with Theseus!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with The Minotaur!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Ariadne!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Minos!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Aegeus!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Pirithous!"
+        },
+        {
+          "id": "myth-button",
+          "text": "Interact with Poseidon!"
+        }
+      ]
+    },
+    "atalanta": {
+      "title": "The Story of Atalanta the Huntress",
+      "description": "<p>Atalanta is a fierce huntress who participates in the Calydonian Boar Hunt and challenges her suitors to a race, emphasizing themes of independence and empowerment.</p><p>Her story defies the typical gender roles of her time and showcases her strength and determination.</p>"
+    },
+    "achilles": {
+      "title": "The Epic of Achilles, Hero of the Trojan War",
+      "description": "<p>Achilles, a key figure in the Trojan War, embodies the complexity of heroism, experiencing both glory and tragedy as he grapples with fate and loss.</p><p>His tragic death and his involvement in the war highlight the destructive nature of pride and anger.</p>"
+    },
+    "odysseus": {
+      "title": "The Saga of Odysseus, King of Ithaca",
+      "description": "<p>Odysseus, the clever hero of the Odyssey, faces numerous challenges on his long journey home after the Trojan War, exploring themes of loyalty and the quest for identity.</p><p>His cleverness and perseverance guide him through the dangers of the gods, monsters, and temptations, culminating in his return to Ithaca.</p>"
+    },
+    "jason": {
+      "title": "The Tale of Jason and the Argonauts",
+      "description": "<p>Jason leads the Argonauts on a quest for the Golden Fleece, with themes of ambition and betrayal intertwined with his relationship with the sorceress Medea.</p><p>His story involves numerous adventures and challenges as he seeks the mythical fleece to claim his rightful throne.</p>"
+    }
+  }
