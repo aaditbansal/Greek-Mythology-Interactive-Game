@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,67 @@
         <button onclick="window.location.href='myth.html?myth=odysseus'">The Saga of Odysseus, King of Ithaca</button>
         <button onclick="window.location.href='myth.html?myth=jason'">The Tale of Jason and the Argonauts</button>
     </div>
-    <p>Sources Used:<br>https://ascaniusyci.org/immersion-materials/Documents%20&%20Visuals/Day%209%20-%20Animals,%20Adjectives,%20Stories%20(7-15-12)%20Folder/Perseus%20story.pdf<br>https://www.britannica.com/topic/Perseus-Greek-mythology<br>https://www.greeka.com/greece-myths/perseus-andromeda/<br>https://mythsmith.fandom.com/wiki/Perseus<br>https://blog.flametreepublishing.com/fantasy-gothic/bid/72619/Fantasy-Fiction-Theseus-and-the-Minotaur<br>https://sirioti.com/en-us/blogs/greek-symbols-meaning/greek-demigod-hercules-twelve-labors-life-and-fascinating-facts</p>
+    <p>Sources Used:<br>https://ascaniusyci.org/immersion-materials/Documents%20&%20Visuals/Day%209%20-%20Animals,%20Adjectives,%20Stories%20(7-15-12)%20Folder/Perseus%20story.pdf<br>https://www.britannica.com/topic/Perseus-Greek-mythology<br>https://www.greeka.com/greece-myths/perseus-andromeda/<br>https://mythsmith.fandom.com/wiki/Perseus<br>https://blog.flametreepublishing.com/fantasy-gothic/bid/72619/Fantasy-Fiction-Theseus-and-the-Minotaur<br>https://sirioti.com/en-us/blogs/greek-symbols-meaning/greek-demigod-hercules-twelve-labors-life-and-fascinating-facts<br>http://seaver-faculty.pepperdine.edu/dgreen/Nasc109/Resources/88/constellation_history/Perseus.htm#:~:text=In%20one%20version%20of%20the,Perseus%20as%20his%20own%20son.</p>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greek Myths</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Function to load links from the file
+        function loadLinks() {
+            // Use the Fetch API to load the text file
+            fetch('links.txt')
+                .then(response => response.text())
+                .then(data => {
+                    // Split the file content by new lines
+                    const links = data.split('\n');
+                    // Create a container for the links
+                    const linksContainer = document.getElementById('links-container');
+
+                    // Loop through each link and create an anchor tag
+                    links.forEach(link => {
+                        if (link.trim()) { // Check if link is not empty
+                            // Create a new anchor element
+                            const anchor = document.createElement('a');
+                            anchor.href = link.trim();
+                            anchor.textContent = link.trim();
+                            anchor.target = '_blank'; // Open links in a new tab
+                            linksContainer.appendChild(anchor);
+
+                            // Add a <br> after each link
+                            linksContainer.appendChild(document.createElement('br'));
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading links:', error));
+        }
+
+        // Load the links once the page is fully loaded
+        document.addEventListener('DOMContentLoaded', loadLinks);
+    </script>
+</head>
+<body>
+    <h1>Greek Myths Interactive Game</h1>
+    <p class="centre-aligned">Welcome! Here you can choose between a variety of Ancient Greek Myths.<br>Click on any of the ones below to learn more about the myths, and you will be greeted with multiple characters you can interact with.<br>This site takes your input question for characters and uses AI to formulate a response by said character in said context, for a truly interactive experience.<br>Have Fun!<br><br>*Made by Aadit Bansal for Georgia Tech HTS 3028 Ancient Greece</p>
+    <div class="myth-buttons">
+        <button onclick="window.location.href='myth.html?myth=perseus'">The Myth of Perseus and Andromeda</button>
+        <button onclick="window.location.href='myth.html?myth=heracles'">The Twelve Labours of Heracles</button>
+        <button onclick="window.location.href='myth.html?myth=theseus'">The Legend of Theseus and the Minotaur</button>
+        <button onclick="window.location.href='myth.html?myth=atalanta'">The Story of Atalanta the Huntress</button>
+        <button onclick="window.location.href='myth.html?myth=achilles'">The Epic of Achilles, Hero of the Trojan War</button>
+        <button onclick="window.location.href='myth.html?myth=odysseus'">The Saga of Odysseus, King of Ithaca</button>
+        <button onclick="window.location.href='myth.html?myth=jason'">The Tale of Jason and the Argonauts</button>
+    </div>
+    <p>Sources Used:</p>
+    <div id="links-container"></div>
 </body>
 </html>
