@@ -21,7 +21,7 @@ def scrape_content(filename, title):
     descriptions = {}
     for section in sections:
         if "~" in section:
-            label, description = section.split("~", 1)
+            label, description = section.split("{", 1)
             descriptions[label.strip()] = description.strip()
     return descriptions.get(title, "Pretend to be a greek mythology character")
 
