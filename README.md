@@ -20,7 +20,7 @@ This is currently developer-based and can therefore only be used on localhost. F
 
 5. Copy this API Key and paste it in .env in the same line as OPENAI_API_KEY =
 
-6. It may be necessary to add $5 in credit to use the API. This can be done here: https://platform.openai.com/settings/organization/billing/overview. Make sure auto-recharge is off, you will not need more than the minimum amount (unless you absolutely grind for some reason)
+6. It may be necessary to add $5 in credit to use the API. This can be done here: https://platform.openai.com/settings/organization/billing/overview. Make sure auto-recharge is off, you should not need more than a cent or two, but $5 is the minimum amount as far as I know (unless you absolutely grind for some reason)
 
 7. Click 'Terminal' at the top of VS Code and select 'New Terminal'. Do this a second time so that you have two terminals.
 
