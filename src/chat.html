@@ -7,25 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Title for the chat -->
     <h1 id="chat-title"></h1>
     
-    <!-- The content area for the chat (can be expanded later) -->
     <div id="chat-content">
         <p>Welcome to the conversation! Please remain patient as the answer generates (no it could actually take a while, wait until prompted, there should be a message displayed before you type again). Enter your questions below:</p>
-        <!-- More chat functionality could go here -->
          <p id="conversation"></p>
     </div>
 
     <input type="text" id="user-input" class="styled-textbox" placeholder="What do you ask of me, traveller?" />
     <button id="submit-btn">Submit</button>
 
-    <!-- Go Back Button -->
     <button onclick="window.history.back()" id="myth-button">Go Back</button>
     <hr class="grey-line">
 
     <script>
-        // Function to get query parameter
+        // gets user question
         function getQueryParameter(name) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(name);
@@ -33,26 +29,20 @@
 
         let conversationHistory = [];
 
-        // Retrieve the myth name from the URL query parameter
+        // takes the title part of the prompt
         let mythName = getQueryParameter('myth');
         const mythName_copy = mythName;
 
-        // Update the page title and chat content dynamically
         if (mythName) {
-            // Set the page title
             document.getElementById('chat-title').innerText = mythName.replace('_', ' ');
 
-            // Set the myth name in the content area
-            // document.getElementById('myth-name').innerText = mythName.replace('_', ' ');
-
-            //fetch(`/start-chat?myth=${mythName}`)
+            //sending control to python backend
             fetch('http://localhost:5000/start-chat?myth=' + mythName)
                 .then(response => response.json())
                 .then(data => {
                     const randomLetter = data.randomLetter;
                     conversationHistory.push({ mythName, randomLetter });
                     updateConversationDisplay();
-                    // document.getElementById('conversation').innerText = `${randomLetter}`;
                 })
                 .catch(error => {
                     console.error('Error fetching data from the backend:', error);
@@ -60,7 +50,7 @@
 
              mythName = null
         } else {
-            // If no myth is provided, show an error message
+            // error handling
             document.getElementById('chat-title').innerText = 'No Myth Selected';
             document.getElementById('myth-name').innerText = 'Sorry, no myth was passed in.';
         }
