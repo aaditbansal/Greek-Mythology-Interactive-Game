@@ -1,8 +1,11 @@
 # Greek-Mythology-Interactive-Game
 
 An AI-based website where you can interact with characters from popular Greek myths.
+
 Keep in mind while using, it may actually take a while for the responses to generate. When you first open it, there'll be a blank screen. Wait for the text to automatically generate. Then type in your prompt, click Submit/Enter, and wait for the text to pop up on the screen again.
+
 Keep something else in mind: some of the characters may not be ready in the backend. If that is the case, the AI chooses a random character from Greek Mythology (bias towards Gods/Famous Heroes), and behaves like that character.
+
 \*as of the current version, the myths of Atalanta, Achilles, Odysseus, and Jason are incomplete, and Heracles will generate random characters
 
 This is currently developer-based and can therefore only be used on localhost. Follow the installation instructions below to download and use:
