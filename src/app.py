@@ -5,6 +5,7 @@ import string
 import os
 from dotenv import load_dotenv
 import openai
+import base64
 
 load_dotenv()
 
@@ -15,9 +16,11 @@ app = Flask(__name__)
 CORS(app)
 
 def scrape_content(filename, title):
-    with open(filename, 'r') as file:
+    with open(filename, 'rb') as file:
         content = file.read()
-    sections = content.split("\n\n")
+    if True:
+        content = base64.b64decode(content).decode()
+    sections = content.split("}")
     descriptions = {}
     for section in sections:
         if "{" in section:
@@ -30,7 +33,7 @@ def scrape_content(filename, title):
 def start_chat():
     myth_name = request.args.get('myth')
     global conversation_history
-    conversation_history = scrape_content("descriptions.txt", myth_name)
+    conversation_history = scrape_content("descriptions.txt.b64", myth_name)
     if myth_name:
         print(myth_name) # making sure the right myth is selected
         response = openai.chat.completions.create(

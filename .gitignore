@@ -17,3 +17,8 @@ node_modules/
 
 # Ignore temporary storage files
 descriptions_copy.txt
+encoder.py
+decoder.py
+descriptions_copy2.txt
+encoded_descriptions.txt.b64
+decoded_file.txt
