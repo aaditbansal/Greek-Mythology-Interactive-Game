@@ -30,6 +30,6 @@ This is currently developer-based and can therefore only be used on localhost. F
 
 10. In the first terminal, run `python3 app.py` and in the second terminal, run `python3 -m http.server 8000`
 
-11. Type into your browser (Chrome works well on Windows, not sure about others): `http://localhost:8000/src/`
+11. Type into your browser (Chrome works well on Windows, not sure about others): `http://localhost:8000`
 
 12. Welcome to my Greek Mythology Interactive Game!
